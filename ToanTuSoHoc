@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class ToanTuSoHoc {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Nhập giá trị cho firstNumber: ");
+        int firstNumber = scanner.nextInt();
+
+        System.out.print("Nhập giá trị cho secondNumber: ");
+        int secondNumber = scanner.nextInt();
+
+        System.out.println("\n--- THÔNG TIN BIẾN ---");
+        System.out.println("firstNumber = " + firstNumber);
+        System.out.println("secondNumber = " + secondNumber);
+
+        System.out.println("\n--- KẾT QUẢ PHÉP TÍNH ---");
+        
+        int tong = firstNumber + secondNumber;
+        System.out.println("Tổng (+): " + tong);
+
+        int hieu = firstNumber - secondNumber;
+        System.out.println("Hiệu (-): " + hieu);
+
+        int tich = firstNumber * secondNumber;
+        System.out.println("Tích (*): " + tich);
+
+        if (secondNumber != 0) {
+            int thuong = firstNumber / secondNumber;
+            System.out.println("Thương (/): " + thuong);
+
+            int phanDu = firstNumber % secondNumber;
+            System.out.println("Phần dư (%): " + phanDu);
+        } else {
+            System.out.println("Thương (/): Lỗi chia cho 0");
+            System.out.println("Phần dư (%): Lỗi chia cho 0");
+        }
+
+        scanner.close();
+    }
+}
