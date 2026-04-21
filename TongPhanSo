@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class TongPhanSo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Nhập tử số thứ nhất: ");
+        int tu1 = scanner.nextInt();
+        
+        System.out.print("Nhập mẫu số thứ nhất: ");
+        int mau1 = scanner.nextInt();
+
+        System.out.print("Nhập tử số thứ hai: ");
+        int tu2 = scanner.nextInt();
+        
+        System.out.print("Nhập mẫu số thứ hai: ");
+        int mau2 = scanner.nextInt();
+
+        System.out.println("\n--- KẾT QUẢ ---");
+        
+        if (mau1 != 0 && mau2 != 0) {
+            int tuTong = (tu1 * mau2) + (tu2 * mau1);
+            int mauTong = mau1 * mau2;
+
+            System.out.println("Tổng của " + tu1 + "/" + mau1 + " và " + tu2 + "/" + mau2 + " là: " + tuTong + "/" + mauTong);
+        } else {
+            System.out.println("Lỗi: Mẫu số không được phép bằng 0!");
+        }
+
+        scanner.close();
+    }
+}
