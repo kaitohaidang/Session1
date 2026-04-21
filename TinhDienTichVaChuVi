@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class HinhChuNhat {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Nhập chiều rộng: ");
+        float width = scanner.nextFloat();
+
+        System.out.print("Nhập chiều cao: ");
+        float height = scanner.nextFloat();
+
+        System.out.println("\n--- KẾT QUẢ ---");
+        
+        if (width > 0 && height > 0) {
+            float area = width * height;
+            float perimeter = 2 * (width + height);
+
+            System.out.println("Diện tích hình chữ nhật: " + area);
+            System.out.println("Chu vi hình chữ nhật: " + perimeter);
+        } else {
+            System.out.println("Lỗi: Chiều rộng và chiều cao phải là số dương!");
+        }
+
+        scanner.close();
+    }
+}
